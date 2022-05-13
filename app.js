@@ -3,8 +3,9 @@ const app = express();
 
 const PORT = 4000
 
-app.get("/", (req, res) => {
-    res.send("Hi");
+app.post("/post", (req, res) => {
+    console.log("Connected to React");
+    res.redirect("/");
 });
 
 app.listen(PORT, console.log(`Server is listening on PORT ${PORT}`));
